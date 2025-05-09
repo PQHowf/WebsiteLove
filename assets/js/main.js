@@ -85,7 +85,7 @@ import { fetchGalleryImages } from "./api.js";
         <div class="gallery-item h-100">
           <img src="${img.image}" class="img-fluid" alt="${img.title}">
           <div class="p-3">
-            <h5 class="mt-3"><i class="cus-bi bi bi-camera"></i> ${img.title}</h5>
+            <p class="mt-3"><i class="cus-bi bi bi-camera"></i> ${img.title}</p>
             <p class="mb-1"><i class="cus-bi bi bi-geo-alt-fill"></i><span class="ms-2"> ${img.address}</span></p>
             <p class="mt-2"><i class="cus-bi bi bi-calendar4-week"></i>
               <span class="ms-2"> 
