@@ -1006,3 +1006,14 @@ section,
   font-weight: bold;
   color: #cf2e29;
 }
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: fill;
+}
+
+.col-xl-3 {
+  width: 20%;
+}
