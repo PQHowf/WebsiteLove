@@ -99,9 +99,6 @@ import { fetchGalleryImages } from "./api.js";
               </span>
             </p>
           </div>
-          <div class="gallery-links d-flex align-items-center justify-content-center">
-            <a href="${img.image}" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-          </div>
         </div>
       `;
       galleryContainer.appendChild(item);

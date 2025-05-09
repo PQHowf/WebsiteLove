@@ -560,10 +560,6 @@ section,
   margin-top: 0;
 }
 
-.gallery .gallery-item:hover img {
-  transform: scale(1.1);
-}
-
 .glightbox-clean .gslide-description {
   background: #272727;
 }
