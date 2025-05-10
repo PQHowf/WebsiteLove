@@ -691,6 +691,7 @@ section,
     opacity: 1;
     transform: scale(1.12);
   }
+
 }
 
 /*--------------------------------------------------------------
@@ -1005,4 +1006,11 @@ section,
 .cus-bi {
   font-weight: bold;
   color: #cf2e29;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: fill;
 }
