@@ -691,6 +691,7 @@ section,
     opacity: 1;
     transform: scale(1.12);
   }
+
 }
 
 /*--------------------------------------------------------------
@@ -1012,8 +1013,4 @@ section,
     height: auto;
     max-height: 500px;
     object-fit: fill;
-}
-
-.col-xl-3 {
-  width: 20%;
 }
