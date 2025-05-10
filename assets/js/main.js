@@ -77,7 +77,7 @@ import { fetchGalleryImages } from "./api.js";
     const imageList = await fetchGalleryImages();
     const galleryContainer = document.querySelector("#gallery .row");
     galleryContainer.innerHTML = "";
-
+    imageList.sort((a, b) => new Date(b.time) - new Date(a.time));
     imageList.forEach((img) => {
       const item = document.createElement("div");
       item.className = "col-xl-3 col-lg-4 col-md-6";
