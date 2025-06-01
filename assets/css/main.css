@@ -1258,15 +1258,8 @@ section,
 }
 
 .img-fluid {
-<<<<<<< HEAD
   width: 100%;
   height: auto;
   max-height: 500px;
   object-fit: fill;
-=======
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: fill;
->>>>>>> 0d31f62667b1c2601f16ff2c9a63a3cdd356441e
 }
