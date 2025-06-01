@@ -3,6 +3,26 @@ import { fetchGalleryImages } from "./api.js";
 (function () {
   "use strict";
 
+  document.querySelectorAll("#navmenu a").forEach((navmenu) => {
+    navmenu.addEventListener("click", () => {
+      if (document.querySelector(".mobile-nav-active")) {
+        mobileNavToogle();
+      }
+    });
+  });
+
+  /**
+   * Toggle mobile nav dropdowns
+   */
+  document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
+    navmenu.addEventListener("click", function (e) {
+      e.preventDefault();
+      this.parentNode.classList.toggle("active");
+      this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
+      e.stopImmediatePropagation();
+    });
+  });
+
   /** Toggle scrolled class on body */
   function toggleScrolled() {
     const body = document.querySelector("body");
@@ -85,14 +105,18 @@ import { fetchGalleryImages } from "./api.js";
         <div class="gallery-item h-100">
           <img src="${img.image}" class="img-fluid" alt="${img.title}">
           <div class="p-3">
-            <p class="mt-3 mb-2"><i class="cus-bi bi bi-camera"></i><span class="ms-2"> ${img.title}</span></p>
-            <p class="mb-1"><i class="cus-bi bi bi-geo-alt-fill"></i><span class="ms-2"> ${img.address}</span></p>
+            <p class="mt-3 mb-2"><i class="cus-bi bi bi-camera"></i><span class="ms-2"> ${
+              img.title
+            }</span></p>
+            <p class="mb-1"><i class="cus-bi bi bi-geo-alt-fill"></i><span class="ms-2"> ${
+              img.address
+            }</span></p>
             <p class="mt-2"><i class="cus-bi bi bi-calendar4-week"></i>
               <span class="ms-2"> 
                 ${(() => {
                   const d = new Date(img.time);
-                  const day = String(d.getDate()).padStart(2, '0');
-                  const month = String(d.getMonth() + 1).padStart(2, '0');
+                  const day = String(d.getDate()).padStart(2, "0");
+                  const month = String(d.getMonth() + 1).padStart(2, "0");
                   const year = d.getFullYear();
                   return `${day}/${month}/${year}`;
                 })()}
