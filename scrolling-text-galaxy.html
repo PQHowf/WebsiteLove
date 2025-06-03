@@ -279,24 +279,25 @@ body:active {
         </style>
   </head>
   <body class="index-page">
-    <header id="header" class="header d-flex align-items-center sticky-top">
-      <div
-        class="container-fluid position-relative d-flex align-items-center justify-content-start">
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-          <i class="bi bi-chat-heart"></i>
-          <h1 class="sitename">WebsiteLove</h1>
-        </a>
+    <button id="backBtn" style="
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #000;
+      font-size: 40px;
+      cursor: pointer;
+      z-index: 1000;
+      color: #f373d7;
+      border: none;
+    ">
+      <i class="bi bi-arrow-left-square-fill"></i>
+    </button>
 
-        <nav id="navmenu" class="navmenu ms-3 mt-2">
-          <ul>
-            <li><a href="index.html">Website Love<br></a></li>
-            <li><a href="scrolling-text-galaxy.html?index=0">Scolling Text In
-                Galaxy</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-    </header>
+    <script>
+      document.getElementById('backBtn').addEventListener('click', () => {
+        history.back();
+      });
+    </script>
     <div class="loading-screen" id="loadingScreen">
       <div class="loading-spinner"></div>
       <h2>Những điều tốt đẹp đều cần thời gian...</h2>
@@ -315,7 +316,7 @@ body:active {
     </div>
 
     <audio id="galaxyAudio" controls style="display:none"></audio>
-
+    <script type="module" src="assets/js/main.js"></script>
     <script type="module">
             import { db, doc, getDoc } from "./assets/js/firebase-config.js";
 
@@ -836,6 +837,6 @@ function createImageParticle() {
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Main JS File -->
-    <script type="module" src="assets/js/main.js"></script>
+
   </body>
 </html>
