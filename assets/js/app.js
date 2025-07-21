@@ -13,9 +13,10 @@ document.addEventListener(
         : "0" + (yourDate.getMonth() + 1)
     }-${yourDate.getFullYear()}`;
 
-    document.querySelector("date").textContent =
-      Math.floor(Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24) +
-      " DAYS";
+    const today = new Date();
+    const diffDays = Math.floor((today - yourDate) / (1000 * 60 * 60 * 24)) + 1;
+
+    document.querySelector("date").textContent = diffDays + " DAYS";
 
     function olock() {
       var today = new Date(),
